@@ -1,0 +1,1 @@
+const curWeather = getWeather('Grimsby');
