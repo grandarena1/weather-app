@@ -60,7 +60,7 @@ function setupUI(weatherData, forecastData) {
     windSpeedText.textContent = `${weatherData.current.wind_kph} km/h`;
 
     if(!weatherData.current.is_day) {
-        document.body.style.backgroundColor = '#012a4a';
+        document.body.style.backgroundColor = '#293241';
     }
     else {
         document.body.style.backgroundColor = '#5b84a3';
@@ -71,3 +71,8 @@ function setupUI(weatherData, forecastData) {
 }
 
 initDefaultLocation();
+
+/*  TODO:
+        *Make search bar work
+        *Add more weather icons
+*/
