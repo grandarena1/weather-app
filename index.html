@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
     <link href="./style.css" rel="stylesheet">
-    <script src="./weather.js" defer></script>
     <script src="./app.js" defer></script>
 </head>
 <body>
@@ -15,6 +14,30 @@
         </header>
         <div class="search-bar">
             <input type="text" placeholder="Enter location">
+        </div>
+        <div class="weather-container">
+            <div class="top-row">
+                <div class="general-info">
+                    <h2 class="location">Location</h2>
+                    <h3 class="weather">Weather</h3>
+                    <h4 class="time">Time/date</h4>
+                    <p class="temperature">Temperature</p>
+                    <img class="weather-icon" />
+                </div>
+                <div class="weather-info">
+                    <h4>Feels Like</h4>
+                    <h3 class="feels-like">[Temperature]</h3>
+                    <h4>Humidity</h4>
+                    <h3 class="humidity">[%]</h3>
+                    <h4>Chance of Rain</h4>
+                    <h3 class="rain-chance">[%]</h3>
+                    <h4>Wind Speed</h4>
+                    <h3 class="wind-speed">[kp/h]</h3>
+                </div>
+            </div>
+            <div class="bottom-row">
+
+            </div>
         </div>
     </div>
 </body>
