@@ -58,6 +58,14 @@ function setupUI(weatherData, forecastData) {
     humidityText.textContent = `${weatherData.current.humidity}%`;
     chanceOfRainText.textContent = `${forecastData.forecast.forecastday[0].day.daily_chance_of_rain}%`;
     windSpeedText.textContent = `${weatherData.current.wind_kph} km/h`;
+
+    if(!weatherData.current.is_day) {
+        document.body.style.backgroundColor = '#012a4a';
+    }
+    else {
+        document.body.style.backgroundColor = '#5b84a3';
+    }
+
     console.log(weatherData);
     console.log(forecastData);
 }
