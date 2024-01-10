@@ -12,7 +12,13 @@ async function getWeather(location) {
     try {
         const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=e5c3e7dde25f417b88d193209240801&q=${location}`);
         const weather = await response.json();
-    
+
+        if (weather.location && weather.location.name) {
+            setupUI(weather, await getForecast(location));
+        } else {
+            alert('Location not found');
+        }
+                
         //Weather information
         return weather;
     }
@@ -67,12 +73,16 @@ function setupUI(weatherData, forecastData) {
     }
 
     console.log(weatherData);
-    console.log(forecastData);
 }
 
 initDefaultLocation();
 
-/*  TODO:
-        *Make search bar work
-        *Add more weather icons
-*/
+const INPUT_SEARCH = document.querySelector('input');
+INPUT_SEARCH.addEventListener('keyup', (event) => {
+    if(event.key === 'Enter') {
+        event.preventDefault();
+        
+        const newLocation = INPUT_SEARCH.value;
+        getWeather(newLocation);
+      }
+});
