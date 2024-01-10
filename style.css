@@ -72,8 +72,8 @@ input::placeholder {
 
 .general-info, .weather-info {
     width: 450px;
-    min-height: 350px;
-    max-height: 400px;
+    min-height: 475px;
+    max-height: 475px;
     background: linear-gradient(0deg, #293241 0%, rgb(229, 213, 169) 100%);
     padding: 30px 50px;
     border-radius: 10px;
